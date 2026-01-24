@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///C:/Users/DENIS%20FBI-STORE/Desktop/Site_kossam/decouvrir.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrez notre Kossam | Authentique et Traditionnel</title>
+    <link rel="stylesheet" href="./Découvrez notre Kossam _ Authentique et Traditionnel_files/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fefaf0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header */
+        
+        .header {
+            text-align: center;
+            padding: 20px 0 30px;
+            border-bottom: 2px dashed #d4a55e;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #8b4513;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #a0522d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        /* Section Préparation */
+        
+        .preparation-section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-title {
+            color: #8b4513;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: #d4a55e;
+            bottom: -10px;
+            left: 20%;
+        }
+        
+        .preparation-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .preparation-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .preparation-text {
+            padding: 25px;
+            background: linear-gradient(to right, #fff8e1, #ffecb3);
+        }
+        
+        .preparation-text h3 {
+            color: #5d4037;
+            margin-bottom: 15px;
+        }
+        
+        .preparation-text p {
+            color: #6d4c41;
+            font-size: 1.05rem;
+        }
+        /* Section Produits */
+        
+        .products-section {
+            margin-bottom: 50px;
+        }
+        
+        .products-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: #5d4037;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.2);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-name {
+            color: #8b4513;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .product-features {
+            margin-bottom: 20px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #5d4037;
+        }
+        
+        .feature i {
+            color: #d4a55e;
+            margin-right: 10px;
+        }
+        
+        .product-price {
+            font-size: 1.8rem;
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            background: #f5f5f5;
+            border-radius: 50px;
+            padding: 5px 15px;
+        }
+        
+        .quantity-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: #8b4513;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+        
+        .quantity {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 10px;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        .add-to-cart {
+            background: linear-gradient(to right, #d4a55e, #8b4513);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            flex-grow: 1;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .add-to-cart:hover {
+            background: linear-gradient(to right, #8b4513, #5d2d0c);
+            transform: scale(1.05);
+        }
+        /* Bannière */
+        
+        .banner {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            border-left: 5px solid #d4a55e;
+        }
+        
+        .banner-text {
+            font-size: 1.2rem;
+            color: #5d4037;
+            font-style: italic;
+        }
+        /* Panier */
+        
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 350px;
+            height: 100%;
+            background: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            overflow-y: auto;
+            transition: right 0.4s ease;
+            z-index: 1000;
+        }
+        
+        .cart-sidebar.active {
+            right: 0;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+        
+        .cart-title {
+            font-size: 1.5rem;
+            color: #8b4513;
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .cart-items {
+            margin-bottom: 20px;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .cart-item-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        
+        .cart-item-details {
+            flex-grow: 1;
+        }
+        
+        .cart-item-name {
+            font-weight: bold;
+            color: #5d4037;
+        }
+        
+        .cart-item-price {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        .cart-total {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #8b4513;
+            text-align: right;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(to right, #d4a55e, #8b4513);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+            z-index: 999;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff5722;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        /* Message de confirmation */
+        
+        .confirmation-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            align-items: center;
+            gap: 10px;
+            z-index: 1001;
+        }
+        
+        .confirmation-message.active {
+            display: flex;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .preparation-img {
+                height: 300px;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 30px auto;
+            }
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+            .product-actions {
+                flex-direction: column;
+            }
+            .quantity-selector {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container">
+        <div class="header">
+            <h1>Découvrez notre Kossam Authentique</h1>
+            <p>Un délice traditionnel préparé avec passion et savoir-faire ancestral</p>
+        </div>
+    </div>
+
+    <!-- Section Préparation -->
+    <div class="container">
+        <div class="preparation-section">
+            <h2 class="section-title">Notre Savoir-Faire Artisanal</h2>
+            <div class="preparation-card">
+                <!-- Remplace cette image par ta photo de préparation -->
+                <img src="./Découvrez notre Kossam _ Authentique et Traditionnel_files/preparation.jpg" alt="Préparation traditionnelle du Kossam" class="preparation-img">
+                <div class="preparation-text">
+                    <h3>L'Art du Kossam Traditionnel</h3>
+                    <p>Chaque Kossam est préparé avec soin et selon la tradition, pour vous offrir un goût authentique et une qualité inégalée. Notre processus respecte les méthodes ancestrales tout en garantissant une hygiène irréprochable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bannière -->
+    <div class="container">
+        <div class="banner">
+            <p class="banner-text">"Du savoir-faire traditionnel à votre table : découvrez nos deux formats pour toutes vos occasions !"</p>
+        </div>
+    </div>
+
+    <!-- Section Produits -->
+    <div class="container">
+        <div class="products-section">
+            <h2 class="products-title">Choisissez votre format préféré</h2>
+
+            <div class="products-grid">
+                <!-- Produit 1 : Kossam en sachet -->
+                <div class="product-card">
+                    <!-- Remplace cette image par ta photo du Kossam en sachet -->
+                    <img src="./Découvrez notre Kossam _ Authentique et Traditionnel_files/sachet.png" alt="Kossam Traditionnel en Sachet" class="product-img">
+                    <div class="product-content">
+                        <h3 class="product-name">Kossam en Sachet</h3>
+                        <p class="product-description">Notre Kossam traditionnel en format pratique et économique, parfait pour une dégustation rapide ou pour agrémenter vos petits plats.</p>
+
+                        <div class="product-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Format pratique et économique</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Idéal pour une dégustation ou une petite recette</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Conservation facile</span>
+                            </div>
+                        </div>
+
+                        <div class="product-price">100 FCFA / sachet</div>
+
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus" data-product="sachet">-</button>
+                                <span class="quantity" id="quantity-sachet">1</span>
+                                <button class="quantity-btn plus" data-product="sachet">+</button>
+                            </div>
+                            <button class="add-to-cart" data-product="sachet" data-price="100" data-img="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80">
+                                <i class="fas fa-shopping-cart"></i>
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produit 2 : Kossam en bouteille -->
+                <div class="product-card">
+                    <!-- Remplace cette image par ta photo du Kossam en bouteille -->
+                    <img src="./Découvrez notre Kossam _ Authentique et Traditionnel_files/bouteille.png" alt="Kossam Authentique en Bouteille" class="product-img">
+                    <div class="product-content">
+                        <h3 class="product-name">Kossam en Bouteille</h3>
+                        <p class="product-description">Notre Kossam authentique en format familial, offrant une plus grande quantité pour partager en famille ou entre amis.</p>
+
+                        <div class="product-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Format familial, plus grande quantité</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Qualité premium, parfait pour partager</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bouteille pratique et réutilisable</span>
+                            </div>
+                        </div>
+
+                        <div class="product-price">300 FCFA / bouteille</div>
+
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus" data-product="bouteille">-</button>
+                                <span class="quantity" id="quantity-bouteille">1</span>
+                                <button class="quantity-btn plus" data-product="bouteille">+</button>
+                            </div>
+                            <button class="add-to-cart" data-product="bouteille" data-price="300" data-img="https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80">
+                                <i class="fas fa-shopping-cart"></i>
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panier flottant -->
+    <div class="cart-icon" id="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!-- Sidebar Panier -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3 class="cart-title">Votre Panier</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            <p id="empty-cart-message">Votre panier est vide</p>
+        </div>
+        <div class="cart-total">
+            Total: <span id="cart-total">0</span> FCFA
+        </div>
+    </div>
+
+    <!-- Message de confirmation -->
+    <div class="confirmation-message" id="confirmation-message">
+        <i class="fas fa-check-circle"></i>
+        <span id="confirmation-text">Produit ajouté au panier !</span>
+    </div>
+
+    <script>
+        // Variables globales
+        let cart = [];
+        const cartIcon = document.getElementById('cart-icon');
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const closeCart = document.getElementById('close-cart');
+        const cartCount = document.getElementById('cart-count');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const confirmationMessage = document.getElementById('confirmation-message');
+        const confirmationText = document.getElementById('confirmation-text');
+
+        // Fonction pour afficher le panier
+        function updateCartDisplay() {
+            // Mettre à jour le compteur
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+
+            // Mettre à jour la sidebar du panier
+            cartItems.innerHTML = '';
+
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = 'block';
+                cartTotal.textContent = '0';
+            } else {
+                emptyCartMessage.style.display = 'none';
+                let total = 0;
+
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+
+                    const cartItemElement = document.createElement('div');
+                    cartItemElement.className = 'cart-item';
+                    cartItemElement.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}" class="cart-item-img">
+                    <div class="cart-item-details">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div>Quantité: ${item.quantity} x ${item.price}FCFA</div>
+                        <div class="cart-item-price">${itemTotal} FCFA</div>
+                    </div>
+                `;
+                    cartItems.appendChild(cartItemElement);
+                });
+
+                cartTotal.textContent = total;
+            }
+        }
+
+        // Fonction pour ajouter un produit au panier
+        function addToCart(product, price, img) {
+            const productNames = {
+                'sachet': 'Kossam en Sachet',
+                'bouteille': 'Kossam en Bouteille'
+            };
+
+            const name = productNames[product];
+            const quantity = parseInt(document.getElementById(quantity - $ {
+                product
+            }).textContent);
+
+            // Vérifier si le produit est déjà dans le panier
+            const existingItem = cart.find(item => item.product === product);
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({
+                    product: product,
+                    name: name,
+                    price: price,
+                    quantity: quantity,
+                    img: img
+                });
+            }
+
+            // Mettre à jour l'affichage du panier
+            updateCartDisplay();
+
+            // Afficher le message de confirmation
+            confirmationText.textContent = $ {
+                quantity
+            }
+            $ {
+                name
+            }
+            ajouté(s) au panier!;
+            confirmationMessage.classList.add('active');
+
+            // Masquer le message après 3 secondes
+            setTimeout(() => {
+                confirmationMessage.classList.remove('active');
+            }, 3000);
+
+            // Réinitialiser la quantité à 1
+            document.getElementById(quantity - $ {
+                product
+            }).textContent = '1';
+        }
+
+        // Fonction pour modifier la quantité
+        function changeQuantity(product, change) {
+            const quantityElement = document.getElementById(quantity - $ {
+                product
+            });
+            let quantity = parseInt(quantityElement.textContent);
+
+            if (change === 'increase') {
+                quantity++;
+            } else if (change === 'decrease' && quantity > 1) {
+                quantity--;
+            }
+
+            quantityElement.textContent = quantity;
+        }
+
+        // Fonction pour initialiser les événements
+        function initializeEvents() {
+            // Boutons + et -
+            document.querySelectorAll('.quantity-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = this.getAttribute('data-product');
+
+                    if (this.classList.contains('plus')) {
+                        changeQuantity(product, 'increase');
+                    } else if (this.classList.contains('minus')) {
+                        changeQuantity(product, 'decrease');
+                    }
+                });
+            });
+
+            // Boutons "Ajouter au panier"
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = this.getAttribute('data-product');
+                    const price = parseInt(this.getAttribute('data-price'));
+                    const img = this.getAttribute('data-img');
+                    addToCart(product, price, img);
+                });
+            });
+
+            // Ouvrir/fermer le panier
+            cartIcon.addEventListener('click', () => {
+                cartSidebar.classList.add('active');
+            });
+
+            closeCart.addEventListener('click', () => {
+                cartSidebar.classList.remove('active');
+            });
+
+            // Fermer le panier en cliquant à l'extérieur
+            document.addEventListener('click', (event) => {
+                if (!cartSidebar.contains(event.target) && !cartIcon.contains(event.target) && cartSidebar.classList.contains('active')) {
+                    cartSidebar.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialisation au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Vérifier que les éléments existent
+            console.log('Initialisation de la page Kossam...');
+            console.log('Éléments trouvés:');
+            console.log('- Boutons +:', document.querySelectorAll('.quantity-btn.plus').length);
+            console.log('- Boutons -:', document.querySelectorAll('.quantity-btn.minus').length);
+            console.log('- Boutons ajouter:', document.querySelectorAll('.add-to-cart').length);
+
+            // Initialiser les événements
+            initializeEvents();
+
+            // Initialiser l'affichage du panier
+            updateCartDisplay();
+
+            // Message de débogage
+            setTimeout(() => {
+                console.log('Page Kossam initialisée avec succès!');
+            }, 100);
+        });
+
+        // Fonction de débogage - à appeler en cas de problème
+        function debugCart() {
+            console.log('=== DÉBOGAGE PANIER ===');
+            console.log('Cart:', cart);
+            console.log('Cart count:', cartCount.textContent);
+            console.log('Total:', cartTotal.textContent);
+            console.log('Éléments dans cartItems:', cartItems.children.length);
+            console.log('=====================');    
+        }
+    </script></body></html>
